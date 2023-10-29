@@ -19,10 +19,10 @@ requirements:
     - m2-base
     - m2w64-toolchain
     - m2w64-msmpi
-    - otm-hdf5
+    - hdf5-otm
   run:
     - m2w64-msmpi
-    - otm-hdf5
+    - hdf5-otm
 
 about:
   home: https://www.salome-platform.org/user-section/about/med
