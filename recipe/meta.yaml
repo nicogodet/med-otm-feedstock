@@ -1,0 +1,38 @@
+{% set name = "med-otm" %}
+{% set version = "4.1.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  - url: https://files.salome-platform.org/Salome/medfile/med-{{ version }}.tar.gz
+    sha256: a082b705d1aafe95d3a231d12c57f0b71df554c253e190acca8d26fc775fb1e6
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - curl
+    - m2-base
+    - m2w64-toolchain
+    - m2w64-msmpi
+    - otm-hdf5
+  run:
+    - m2w64-msmpi
+    - otm-hdf5
+
+about:
+  home: https://www.hdfgroup.org/solutions/hdf5/
+  license: LicenseRef-HDF5
+  license_family: BSD
+  license_file: COPYING
+  summary: HDF5 is a data model, library, and file format for storing and managing data
+  dev_url: https://github.com/HDFGroup/hdf5
+  doc_url: https://portal.hdfgroup.org/display/HDF5/HDF5
+
+extra:
+  recipe-maintainers:
+    - nicogodet
