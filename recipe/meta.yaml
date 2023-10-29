@@ -8,9 +8,11 @@ package:
 source:
   - url: https://files.salome-platform.org/Salome/medfile/med-{{ version }}.tar.gz
     sha256: a082b705d1aafe95d3a231d12c57f0b71df554c253e190acca8d26fc775fb1e6
+    patches:
+      - hdf5.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
